@@ -1,0 +1,20 @@
+<div class="card" style="width: 45%; margin-left: 5%; float: right">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.first }}</td>
+        <td>{{ item.last }}</td>
+        <td>{{ item.handle }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

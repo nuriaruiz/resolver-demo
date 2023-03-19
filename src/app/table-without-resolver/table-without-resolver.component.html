@@ -1,0 +1,23 @@
+<div class="card" style="width: 45%; margin-right: 5%; float: left">
+    <div *ngIf="loading$ | async" class="spinner-container">
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.first }}</td>
+        <td>{{ item.last }}</td>
+        <td>{{ item.handle }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
